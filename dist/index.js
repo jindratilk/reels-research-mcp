@@ -36698,6 +36698,9 @@ function ytDlpVersion() {
 function classify(stderr) {
   const msg = stderr.split("\n").filter((l) => l.includes("ERROR")).pop() ?? stderr.trim().split("\n").pop() ?? "yt-dlp failed";
   const clean = msg.replace(/^ERROR:\s*(\[[^\]]+\]\s*)?/, "").slice(0, 220);
+  if (/no video (in this post|formats found)/i.test(stderr)) {
+    return new ReelsError("Not a video: this is an image or carousel post", "unavailable");
+  }
   if (/429|rate.?limit|too many requests|wait a few minutes/i.test(stderr)) {
     return new ReelsError(`Instagram is rate-limiting this IP: ${clean}`, "rate_limited");
   }
@@ -37445,7 +37448,7 @@ ${(probe.stdout ?? "") + (probe.stderr ?? "").slice(-800)}`);
 }
 
 // src/index.ts
-var VERSION = "0.1.0";
+var VERSION = "0.1.1";
 if (process.argv.includes("--version")) {
   console.log(`reels-research-mcp ${VERSION}`);
   process.exit(0);

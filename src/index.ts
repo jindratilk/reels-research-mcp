@@ -6,7 +6,7 @@ import { registerLinksTool } from "./tools/links.js";
 import { registerDoctorTool, runDoctor } from "./tools/doctor.js";
 import { runSetup } from "./setup.js";
 
-const VERSION = "0.1.0";
+const VERSION = "0.1.1";
 
 // CLI helpers for humans and installing agents.
 if (process.argv.includes("--version")) {

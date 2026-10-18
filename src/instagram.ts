@@ -59,6 +59,9 @@ export function ytDlpVersion(): Promise<string | undefined> {
 function classify(stderr: string): ReelsError {
   const msg = stderr.split("\n").filter((l) => l.includes("ERROR")).pop() ?? stderr.trim().split("\n").pop() ?? "yt-dlp failed";
   const clean = msg.replace(/^ERROR:\s*(\[[^\]]+\]\s*)?/, "").slice(0, 220);
+  if (/no video (in this post|formats found)/i.test(stderr)) {
+    return new ReelsError("Not a video: this is an image or carousel post", "unavailable");
+  }
   if (/429|rate.?limit|too many requests|wait a few minutes/i.test(stderr)) {
     return new ReelsError(`Instagram is rate-limiting this IP: ${clean}`, "rate_limited");
   }

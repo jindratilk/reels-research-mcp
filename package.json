@@ -1,6 +1,6 @@
 {
   "name": "reels-research-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Keyless Instagram Reels MCP server for AI agents: Reel details, timestamped transcripts (local Parakeet speech-to-text), real video frames and links from web pages.",
   "type": "module",
   "bin": { "reels-research-mcp": "dist/index.js" },

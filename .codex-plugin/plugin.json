@@ -1,6 +1,6 @@
 {
   "name": "reels-research",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Keyless Instagram Reels research for agents: Reel details, timestamped transcripts via local speech-to-text (Parakeet Redux), real video frames, Reel links from web pages, plus a research skill.",
   "author": { "name": "jindratilk", "url": "https://github.com/jindratilk" },
   "homepage": "https://reels-research-mcp.vercel.app/",
