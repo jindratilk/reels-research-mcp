@@ -1,0 +1,19 @@
+{
+  "name": "reels-research",
+  "owner": { "name": "jindratilk", "url": "https://github.com/jindratilk" },
+  "metadata": { "description": "Keyless Instagram Reels research MCP server and skill.", "version": "0.1.0" },
+  "plugins": [
+    {
+      "name": "reels-research",
+      "source": "./",
+      "description": "Keyless Instagram Reels research for agents: details, local speech-to-text transcripts, real frames, Reel links from web pages, and a research skill.",
+      "version": "0.1.0",
+      "license": "MIT",
+      "author": { "name": "jindratilk" },
+      "homepage": "https://reels-research-mcp.vercel.app/",
+      "repository": "https://github.com/jindratilk/reels-research-mcp",
+      "category": "productivity",
+      "keywords": ["mcp", "instagram", "reels", "transcript", "research"]
+    }
+  ]
+}

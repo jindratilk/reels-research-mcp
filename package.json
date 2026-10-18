@@ -1,0 +1,31 @@
+{
+  "name": "reels-research-mcp",
+  "version": "0.1.0",
+  "description": "Keyless Instagram Reels MCP server for AI agents: Reel details, timestamped transcripts (local Parakeet speech-to-text), real video frames and links from web pages.",
+  "type": "module",
+  "bin": { "reels-research-mcp": "dist/index.js" },
+  "files": ["dist", "python", "skills", ".claude-plugin", ".codex-plugin", ".agents", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc --noEmit && esbuild src/index.ts --bundle --platform=node --format=esm --target=node20 --outfile=dist/index.js --banner:js='import { createRequire } from \"module\"; const require = createRequire(import.meta.url);'",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "smoke": "tsx test/smoke.ts"
+  },
+  "engines": { "node": ">=20" },
+  "keywords": ["mcp","mcp-server","model-context-protocol","instagram","instagram-reels","reels","transcript","speech-to-text","parakeet","claude-code","claude-plugin","codex","codex-plugin","ai-agent","agent-skill","video-frames"],
+  "homepage": "https://reels-research-mcp.vercel.app/",
+  "repository": { "type": "git", "url": "git+https://github.com/jindratilk/reels-research-mcp.git" },
+  "bugs": { "url": "https://github.com/jindratilk/reels-research-mcp/issues" },
+  "author": "jindratilk",
+  "license": "MIT",
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@types/node": "^20.19.43",
+    "esbuild": "^0.25.12",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "zod": "^4.6.7"
+  }
+}

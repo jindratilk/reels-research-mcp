@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "reels": { "command": "node", "args": ["./dist/index.js"], "cwd": "." }
+  }
+}

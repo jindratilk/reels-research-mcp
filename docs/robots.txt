@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reels-research-mcp.vercel.app/sitemap.xml

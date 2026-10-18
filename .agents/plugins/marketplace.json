@@ -1,0 +1,12 @@
+{
+  "name": "reels-research",
+  "interface": { "displayName": "Reels Research" },
+  "plugins": [
+    {
+      "name": "reels-research",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Research"
+    }
+  ]
+}

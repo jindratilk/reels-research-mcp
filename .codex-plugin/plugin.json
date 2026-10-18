@@ -1,0 +1,26 @@
+{
+  "name": "reels-research",
+  "version": "0.1.0",
+  "description": "Keyless Instagram Reels research for agents: Reel details, timestamped transcripts via local speech-to-text (Parakeet Redux), real video frames, Reel links from web pages, plus a research skill.",
+  "author": { "name": "jindratilk", "url": "https://github.com/jindratilk" },
+  "homepage": "https://reels-research-mcp.vercel.app/",
+  "repository": "https://github.com/jindratilk/reels-research-mcp",
+  "license": "MIT",
+  "keywords": ["instagram", "reels", "mcp", "transcript", "hooks", "frames", "speech-to-text"],
+  "skills": "./skills/",
+  "mcpServers": "./.codex-plugin/mcp.json",
+  "interface": {
+    "displayName": "Reels Research",
+    "shortDescription": "Let your agent study Instagram Reels: transcripts, frames, hooks. No login.",
+    "longDescription": "Read Instagram Reels from their links without a login: author, caption, likes and date, a timestamped transcript of what is said (local speech-to-text with Parakeet Redux, 25 European languages), real video frames for on-screen text and visuals, and Reel links collected from web pages. A research skill plans the work and cites every hook.",
+    "developerName": "jindratilk",
+    "category": "Research",
+    "capabilities": ["Read"],
+    "websiteURL": "https://reels-research-mcp.vercel.app/",
+    "defaultPrompt": ["Break down how these Instagram Reels open: what is said, what is on screen, and the hook type."],
+    "brandColor": "#E64BB0",
+    "composerIcon": "./.codex-plugin/icon.svg",
+    "logo": "./.codex-plugin/logo.png",
+    "screenshots": []
+  }
+}

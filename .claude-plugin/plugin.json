@@ -1,0 +1,13 @@
+{
+  "name": "reels-research",
+  "description": "Keyless Instagram Reels research for agents: Reel details, timestamped transcripts via local speech-to-text (Parakeet Redux), real video frames, Reel links from web pages, plus a research skill.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": { "name": "jindratilk", "url": "https://github.com/jindratilk" },
+  "homepage": "https://reels-research-mcp.vercel.app/",
+  "repository": "https://github.com/jindratilk/reels-research-mcp",
+  "keywords": ["mcp", "instagram", "reels", "transcript", "hooks", "speech-to-text"],
+  "mcpServers": {
+    "reels": { "command": "node", "args": ["${CLAUDE_PLUGIN_ROOT}/dist/index.js"] }
+  }
+}
